@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    body,ul,div,li{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+		div{
+			width: 300px;
+			height: 300px;
+			margin: 150px auto;
+			/* border: 2px solid #ccc; */
+		}
+		body{
+			background-color: #ccc;
+		}
+		.box{
+			width: 300px;
+			height: 300px;
+			transform-style: preserve-3d;
+			/* transform: rotateX(30deg) rotateY(-40deg); */
+			animation:pian 2s linear forwards, run 5s infinite linear 12s;
+
+		}
+		.box li{
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			font: 400 18px/300px "微软雅黑";
+			text-align: center;
+			list-style: none;
+			/* border-radius: 50%; */
+		}
+		.box li:nth-child(1){
+			background: rgba(255,0,0,0.8);
+			animation: up 2s linear 2s forwards;
+			
+		}
+		.box li:nth-child(2){
+			background: rgba(0,255,0,0.8);
+			animation: down 2s linear 4s forwards;
+			
+		}
+		.box li:nth-child(3){
+			 background: rgba(0,0,255,0.8);
+			animation: left 2s linear 6s forwards;
+		}
+		.box li:nth-child(4){
+			background: rgba(255,255,0,0.8);
+			animation: right 2s linear 8s forwards;
+		}
+		.box li:nth-child(5){
+			background: rgba(0,255,255,0.8);
+			animation: forward 1s linear 10s forwards;
+			
+		}
+		.box li:nth-child(6){
+			 background: rgba(255,0,255,0.8);
+			animation: back 1s linear 11s forwards;
+			
+		}
+		@keyframes up{
+			0%{
+				transform: translateY(0px) rotateX(0deg);
+			}
+			50%{
+				transform: translateY(-150px) rotateX(0deg);
+			}
+			100%{
+				transform: translateY(-150px) rotateX(90deg);
+			}
+		}
+		@keyframes down{
+			0%{
+				transform: translateY(0px) rotateX(0deg);
+			}
+			50%{
+				transform: translateY(150px) rotateX(0deg);
+			}
+			100%{
+				transform: translateY(150px) rotateX(-90deg);
+			}
+		}
+		@keyframes left{
+			0%{
+				transform: translateX(0px) rotateY(0deg)
+			}
+			50%{
+				transform: translateX(-150px) rotateX(0deg);
+			}
+			100%{
+				transform: translateX(-150px) rotateY(-90deg)
+			}
+		}
+		@keyframes right{
+			0%{
+				transform: translateX(0px) rotateY(0deg)
+			}
+			50%{
+				transform: translateX(150px) rotateX(0deg);
+			}
+			100%{
+				transform: translateX(150px) rotateY(90deg)
+			}
+		}
+		@keyframes forward{
+			0%{
+				transform: translateZ(0px);
+			}
+			100%{
+				transform: translateZ(150px);
+			}
+		}
+		@keyframes back{
+			0%{
+				transform: translateZ(0px);
+			}
+			100%{
+				transform: translateZ(-150px);
+			}
+		}
+		@keyframes pian{
+			0%{
+				transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			}
+			100%{
+				transform: rotateX(-30deg) rotateY(-40deg) rotateZ(0deg);
+			}
+		}
+		@keyframes run{
+			0%{
+				transform: rotateX(-30deg) rotateY(-40deg) rotateZ(0deg);
+			}
+			100%{
+				transform: rotateX(330deg) rotateY(320deg) rotateZ(360deg);
+			}
+		}
+
+		.dv{
+			height: 20px;
+			width: 80px
+			border: 1px solid #ccc;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul class="box">
+			<li>上</li>
+			<li>下</li>
+			<li>左</li>
+			<li>右</li>
+			<li>前</li>
+			<li>后</li>
+		</ul>
+	</div>
+	<div class="dv">
+		的事件伏安法圣诞节覅而吉尔附近拉个倒计时覅偶二娃几哦啊及覅偶按时间佛尔发多少了开发及偶尔为福建
+	</div>
+</body>
+</html>
